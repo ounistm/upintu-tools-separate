@@ -15,7 +15,7 @@ jobs:
 #---------------------------------------------------n0m0a0p S0C0A0N   
     - name: nmap addison
       #run: sudo nmap -sV --script vuln reportbuilder.addison.com
-      run: sudo nmap -sV reportbuilder.addison.com -d
+      run: sudo nmap -sV reportbuilder.addison.com
 
 
       
