@@ -9,45 +9,30 @@ jobs:
 #---------------------------------------------------update 
     - name: update
       run: sudo apt update
-#---------------------------------------------------n0m0a0p
+#---------------------------------------------------n0m0a0p instal +update db
     - name: n0m0a0p install 
       run: sudo apt install nmap && sudo nmap --script-updatedb
-      
-    - name: multi fubction vilnscan 
-      run : |
-       #git clone https://github.com/scipag/vulscan
-       #sudo ln -s 'pwd'/scipag_vulscan /usr/share/nmap/scripts/vulscan
-       #sudo nmap -sV --script=vulscan/vulscan.nse 47.246.137.62 -d
-       #sudo nmap -sV --script vuln djelfa.info -d
-      
-
-        git clone https://github.com/vulnersCom/nmap-vulners.git
-        sudo cp -r nmap-vulners /usr/share/nmap/scripts
-        sudo nmap -sV –script nmap-vulners/ new.egybest.co -d
-       
-   # - name: nmap api.amazonalexa.com 
-   #   run: sudo nmap --script "(all) and not((http-slowloris or http-form-fuzzer )" api.amazonalexa.com  -d
-
-      #-----------------------------------------------  
+#---------------------------------------------------n0m0a0p S0C0A0N   
+    - name: api.amazonalexa.com
+      run : sudo nmap -sV --script vuln api.amazonalexa.com
     - name: nmap developer.amazon.com
-      run: Fsudo nmap -sV --script "(default or safe or intrusive) and not(http-slowloris or http-form-fuzzer )" developer.amazon.com -d
-      
+      run: sudo nmap -sV --script vuln developer.amazon.com  
     - name: nmap alexa.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" alexa.amazon.com -d
+      run: sudo nmap -sV --script vuln alexa.amazon.com 
     - name: nmap skills-store.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" skills-store.amazon.com -d    
+      run: sudo nmap -sV --script vuln skills-store.amazon.com 
     - name: nmap read.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" read.amazon.com -d 
+      run: sudo nmap -sV --script vuln read.amazon.com 
     - name: nmap alexaanswers.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" alexaanswers.amazon.com -d 
+      run: sudo nmap -sV --script vuln alexaanswers.amazon.com 
     - name: nmap blueprints.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" blueprints.amazon.com -d
+      run: sudo nmap -sV --script vuln blueprints.amazon.com 
     - name: nmap creator.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" creator.amazon.com -d
+      run: sudo nmap -sV --script vuln creator.amazon.com 
     - name: nmap amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" amazon.com -d
+      run: sudo nmap -sV --script vuln amazon.com 
     - name: nmap a4k.amaazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowlori,http-form-fuzzers )" a4k.amaazon.com -d
+      run: sudo nmap -sV --script vuln a4k.amaazon.com 
 
       
 #==============================================================================
@@ -98,10 +83,9 @@ jobs:
 #------------------------Nmap-vulners
 #        git clone https://github.com/vulnersCom/nmap-vulners.git
 #        sudo cp -r nmap-vulners /usr/share/nmap/scripts
-#        sudo nmap –script nmap-vulners/ -sV a.com
-
+#        sudo nmap -sV –script nmap-vulners/ new.egybest.co -d
 #=======================================================
 #To save the results to a text file: -oN output.txt       
-
+#hada yamchi run: sudo nmap -sV --script "(default or safe or intrusive) and not(http-slowloris or http-form-fuzzer )" developer.amazon.com -d
 
 
