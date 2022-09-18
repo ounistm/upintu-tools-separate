@@ -17,12 +17,13 @@ jobs:
       run : |
        git clone https://github.com/scipag/vulscan
        sudo ln -s 'pwd'/scipag_vulscan /usr/share/nmap/scripts/vulscan
-       sudo nmap -sV --script=vulscan/vulscan.nse linuxhint.com
+       sudo nmap -sV --script=vulscan/vulscan.nse alexchanger.com -d
+       
    # - name: nmap api.amazonalexa.com 
    #   run: sudo nmap --script "(all) and not((http-slowloris or http-form-fuzzer )" api.amazonalexa.com  -d
       #-----------------------------------------------  
     - name: nmap developer.amazon.com
-      run: sudo nmap -sV --script "(default or safe or intrusive) and not(http-slowloris or http-form-fuzzer )" developer.amazon.com -d
+      run: Fsudo nmap -sV --script "(default or safe or intrusive) and not(http-slowloris or http-form-fuzzer )" developer.amazon.com -d
       
     - name: nmap alexa.amazon.com
       run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" alexa.amazon.com -d
@@ -80,6 +81,12 @@ jobs:
 #=======================================================brute force
     #nmap -sV --script http-wordpress-brute --script-args 'userdb=users.txt,passdb=pass.txt' noticiasmercedes.com
 #=======================================================brute force fine
+#=======================================================444444444444444444 vuln scan
+#        git clone https://github.com/scipag/vulscan
+#       sudo ln -s 'pwd'/scipag_vulscan /usr/share/nmap/scripts/vulscan
+#       sudo nmap -sV --script=vulscan/vulscan.nse linuxhint.com -d
+#=======================================================vuln scan fin
+       
 
 
 
