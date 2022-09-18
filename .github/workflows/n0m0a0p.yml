@@ -11,13 +11,17 @@ jobs:
       run: sudo apt update
 #---------------------------------------------------n0m0a0p
     - name: n0m0a0p install 
-      run: sudo apt install nmap
-#    - name: nmap api.amazonalexa.com 
-#      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" icmarkets.com -d
-        
+      run: sudo apt install nmap && sudo nmap --script-updatedb
+      
+    - name: multi fubction vilnscan 
+      run : |
+       git clone https://github.com/scipag/vulscan
+       ln -s 'pwd'/scipag_vulscan /usr/share/nmap/scripts/vulscan
+       sudo nmap -sV --script=vulscan/vulscan.nse linuxhint.com
+   # - name: nmap api.amazonalexa.com 
+   #   run: sudo nmap --script "(all) and not((http-slowloris or http-form-fuzzer )" api.amazonalexa.com  -d
+      #-----------------------------------------------  
     - name: nmap developer.amazon.com
-      #run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" developer.amazon.com -d
-      # nmap --script "(default or safe or intrusive) and not http-*"  default or safe or intrusive
       run: sudo nmap -sV --script "(default or safe or intrusive) and not(http-slowloris or http-form-fuzzer )" developer.amazon.com -d
       
     - name: nmap alexa.amazon.com
@@ -56,7 +60,26 @@ jobs:
 #ssl scripts=> sudo nmap -p 443 --script "ssl-*" a -d
 #smtp scripts=> sudo nmap -p 587 --script "smtp-*" a -d
 #mysql scripts=> sudo nmap -p 3306 --script "mysql-*" a -d
+#==============================================================scripts by catecory
+#https://linuxhint.com/nmap-scripting-engine-tutorial/
+#Auth
+#Broadcast
+#Brute
+#Default
+#Discovery
+#DOS
+#Exploit
+#External
+#Fuzzer
+#Intrusive
+#Malware
+#Safe
+#Version
+#Vuln 4444
 
+#=======================================================brute force
+    #nmap -sV --script http-wordpress-brute --script-args 'userdb=users.txt,passdb=pass.txt' noticiasmercedes.com
+#=======================================================brute force fine
 
 
 
