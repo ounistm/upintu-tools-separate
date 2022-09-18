@@ -11,7 +11,9 @@ jobs:
       run: sudo apt update
 #---------------------------------------------------dirb
     - name: dirb
-      run: sudo apt install dirb
+      run: |
+       sudo apt install dirb
+       dirb reportbuilder.addison.com
 #---------------------------------------------------n0m0a0p instal and update db
     - name: n0m0a0p install and update db
       run: Fsudo apt install nmap && sudo nmap --script-updatedb
