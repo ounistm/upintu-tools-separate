@@ -9,8 +9,8 @@ jobs:
 #---------------------------------------------------update 
     - name: update
       run: sudo apt update
-#---------------------------------------------------n0m0a0p instal +update db
-    - name: n0m0a0p install 
+#---------------------------------------------------n0m0a0p instal and update db
+    - name: n0m0a0p install and update db
       run: sudo apt install nmap && sudo nmap --script-updatedb
 #---------------------------------------------------n0m0a0p S0C0A0N   
     - name: api.amazonalexa.com
