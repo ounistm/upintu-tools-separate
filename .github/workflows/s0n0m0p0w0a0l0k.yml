@@ -1,10 +1,10 @@
 name: s0n0m0p0w0a0l0k
 
-on: [push, workflow_dispatch]
+on: workflow_dispatch
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latestF
     steps:
 #---------------------------------------------------update 
     - name: update
@@ -12,5 +12,5 @@ jobs:
 #---------------------------------------------------s0n0m0p0w0a0l0k
     - name: s0n0m0p0w0a0l0k install 
       run: |
-       Fsudo apt install snmpd snmp libsnmp-dev
+       sudo apt install snmpd snmp libsnmp-dev
        snmpwalk -h
