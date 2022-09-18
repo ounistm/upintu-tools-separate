@@ -24,7 +24,7 @@ jobs:
         git clone https://github.com/vulnersCom/nmap-vulners.git
         echo "------------------------------------ls -l"
         ls -l 
-        sudo cp -r /nmap-vulners /usr/share/nmap/scripts
+        sudo cp -r nmap-vulners /usr/share/nmap/scripts
         echo "------------------------------------ls -l /usr/share/nmap/scripts"
         ls -l /usr/share/nmap/scripts
         echo "------------------------------------don"
