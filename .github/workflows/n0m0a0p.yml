@@ -1,0 +1,38 @@
+name: n0m0a0p
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+#---------------------------------------------------update 
+    - name: update
+      run: sudo apt update
+#---------------------------------------------------n0m0a0p
+    - name: nmap install 
+      run: Fsudo apt install nmap
+    - name: nmap api.amazonalexa.com 
+      run: sudo nmap --script=all api.amazonalexa.com -d
+    - name: nmap developer.amazon.com
+      run: sudo nmap --script=all developer.amazon.com -d
+    - name: nmap alexa.amazon.com
+      run: sudo nmap --script=all alexa.amazon.com -d
+    - name: nmap skills-store.amazon.com
+      run: sudo nmap --script=all skills-store.amazon.com -d    
+    - name: nmap read.amazon.com
+      run: sudo nmap --script=all read.amazon.com -d 
+    - name: nmap alexaanswers.amazon.com
+      run: sudo nmap --script=all alexaanswers.amazon.com -d 
+    - name: nmap blueprints.amazon.com
+      run: sudo nmap --script=all blueprints.amazon.com -d
+    - name: nmap creator.amazon.com
+      run: sudo nmap --script=all creator.amazon.com -d
+    - name: nmap amazon.com
+      run: sudo nmap --script=all amazon.com -d
+    - name: nmap a4k.amaazon.com
+      run: sudo nmap --script=all a4k.amaazon.com -d
+
+      
+    - name: Error
+      run: F  
