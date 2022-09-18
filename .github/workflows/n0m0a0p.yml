@@ -13,24 +13,8 @@ jobs:
     - name: n0m0a0p install and update db
       run: sudo apt install nmap && sudo nmap --script-updatedb
 #---------------------------------------------------n0m0a0p S0C0A0N   
-    - name: api.amazonalexa.com
-      run : sudo nmap -sV --script vuln api.amazonalexa.com
-    - name: nmap developer.amazon.com
-      run: sudo nmap -sV --script vuln developer.amazon.com  
-    - name: nmap alexa.amazon.com
-      run: sudo nmap -sV --script vuln alexa.amazon.com 
-    - name: nmap skills-store.amazon.com
-      run: sudo nmap -sV --script vuln skills-store.amazon.com 
-    - name: nmap read.amazon.com
-      run: sudo nmap -sV --script vuln read.amazon.com 
-    - name: nmap alexaanswers.amazon.com
-      run: sudo nmap -sV --script vuln alexaanswers.amazon.com 
-    - name: nmap blueprints.amazon.com
-      run: sudo nmap -sV --script vuln blueprints.amazon.com 
-    - name: nmap creator.amazon.com
-      run: sudo nmap -sV --script vuln creator.amazon.com 
-    - name: nmap amazon.com
-      run: sudo nmap -sV --script vuln amazon.com 
+    - name: nmap addison
+      run: sudo nmap -sV --script vuln addison.com 
     - name: nmap a4k.amaazon.com
       run: sudo nmap -sV --script vuln a4k.amaazon.com 
 
