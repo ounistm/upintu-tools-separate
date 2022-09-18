@@ -1,0 +1,16 @@
+name: d0n0s0e0n0u0m
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+#---------------------------------------------------update 
+    - name: update
+      run: sudo apt update
+#---------------------------------------------------d0n0s0e0n0u0m 444444444444444
+    - name: dnsenum install 
+      run: |
+       Fsudo apt install dnsenum
+       dnsenum google.com
