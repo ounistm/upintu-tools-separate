@@ -9,14 +9,17 @@ jobs:
 #---------------------------------------------------update 
     - name: update
       run: sudo apt update
+#---------------------------------------------------dirb
+    - name: dirb
+      run: sudo apt install dirb
 #---------------------------------------------------n0m0a0p instal and update db
     - name: n0m0a0p install and update db
-      run: sudo apt install nmap && sudo nmap --script-updatedb
+      run: Fsudo apt install nmap && sudo nmap --script-updatedb
 #---------------------------------------------------n0m0a0p S0C0A0N   
     - name: nmap addison
       #run: sudo nmap -sV --script vuln reportbuilder.addison.com
       run: sudo nmap -sV reportbuilder.addison.com
-
+#---------------------------------------------------
 
       
 #==============================================================================
