@@ -16,7 +16,10 @@ jobs:
 #      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" icmarkets.com -d
         
     - name: nmap developer.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" developer.amazon.com -d
+      #run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" developer.amazon.com -d
+      # nmap --script "(default or safe or intrusive) and not http-*"  default or safe or intrusive
+      run: sudo nmap -sV --script "(default or safe or intrusive) and not(http-slowloris or http-form-fuzzer )" developer.amazon.com -d
+      
     - name: nmap alexa.amazon.com
       run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" alexa.amazon.com -d
     - name: nmap skills-store.amazon.com
