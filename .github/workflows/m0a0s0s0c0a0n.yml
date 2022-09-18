@@ -14,7 +14,7 @@ jobs:
       run: sudo apt install masscan
     - name: M0a0s0S0c0a0n0 S0C0A0N
       run: |
-        sudo masscan -p80 150.0.0.0-151.0.0.0 --rate=10000000000 >r.txt
+        sudo masscan -p80 150.0.0.0-150.10.0.0 --rate=100000000 >r.txt
     - name: ls +grep
       run: |
         echo "----------------------------------ls" 
