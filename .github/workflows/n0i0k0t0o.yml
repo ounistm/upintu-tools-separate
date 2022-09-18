@@ -1,17 +1,17 @@
 name: n0i0k0t0o
 
-on: [push, workflow_dispatch]
+on: workflow_dispatch
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latestF
     steps:
 #---------------------------------------------------update 
     - name: update
       run: sudo apt update
 #---------------------------------------------------n0i0k0t0o
     - name: n0i0k0t0o install 
-      run: Fsudo apt install nikto
+      run:  sudo apt install nikto
     - name: n0i0k0t0o scan
       run: |
-       nikto -h alexchanger.com
+       nikto -h a.com
