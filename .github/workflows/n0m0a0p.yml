@@ -16,23 +16,23 @@ jobs:
 #      run: sudo nmap -sV --script "(all) and not(http-slowloris )" icmarkets.com -d
         
     - name: nmap developer.amazon.com
-      run: sudo nmap --script=all developer.amazon.com -d
+      run: sudo nmap -sV --script "(all) and not(http-slowloris )" developer.amazon.com -d
     - name: nmap alexa.amazon.com
-      run: sudo nmap --script=all alexa.amazon.com -d
+      run: sudo nmap -sV --script "(all) and not(http-slowloris )" alexa.amazon.com -d
     - name: nmap skills-store.amazon.com
-      run: sudo nmap --script=all skills-store.amazon.com -d    
+      run: sudo nmap -sV --script "(all) and not(http-slowloris )" skills-store.amazon.com -d    
     - name: nmap read.amazon.com
-      run: sudo nmap --script=all read.amazon.com -d 
+      run: sudo nmap -sV --script "(all) and not(http-slowloris )" read.amazon.com -d 
     - name: nmap alexaanswers.amazon.com
-      run: sudo nmap --script=all alexaanswers.amazon.com -d 
+      run: sudo nmap -sV --script "(all) and not(http-slowloris )" alexaanswers.amazon.com -d 
     - name: nmap blueprints.amazon.com
-      run: sudo nmap --script=all blueprints.amazon.com -d
+      run: sudo nmap -sV --script "(all) and not(http-slowloris )" blueprints.amazon.com -d
     - name: nmap creator.amazon.com
-      run: sudo nmap --script=all creator.amazon.com -d
+      run: sudo nmap -sV --script "(all) and not(http-slowloris )" creator.amazon.com -d
     - name: nmap amazon.com
-      run: sudo nmap --script=all amazon.com -d
+      run: sudo nmap -sV --script "(all) and not(http-slowloris )" amazon.com -d
     - name: nmap a4k.amaazon.com
-      run: sudo nmap --script=all a4k.amaazon.com -d
+      run: sudo nmap -sV --script "(all) and not(http-slowloris )" a4k.amaazon.com -d
 
       
 #==============================================================================
