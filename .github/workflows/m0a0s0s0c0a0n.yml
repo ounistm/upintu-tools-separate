@@ -14,7 +14,7 @@ jobs:
       run: sudo apt install masscan
     - name: M0a0s0S0c0a0n0 S0C0A0N
       run: |
-        sudo masscan -p 80 45.0.0.0-46.0.0.0 --max-rate |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' -oX r.txt
+        sudo masscan -p 80 45.0.0.0-46.0.0.0 --max-rate 100000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' -oX r.txt
         echo "---------------------------------" 
         cat r.txt
 
