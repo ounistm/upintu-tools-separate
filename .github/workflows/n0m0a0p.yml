@@ -23,7 +23,7 @@ jobs:
 
         git clone https://github.com/vulnersCom/nmap-vulners.git
         sudo cp -r nmap-vulners /usr/share/nmap/scripts
-        sudo nmap -sV –script nmap-vulners/ new.egybest.co
+        sudo nmap -sV –script nmap-vulners/ new.egybest.co -d
        
    # - name: nmap api.amazonalexa.com 
    #   run: sudo nmap --script "(all) and not((http-slowloris or http-form-fuzzer )" api.amazonalexa.com  -d
