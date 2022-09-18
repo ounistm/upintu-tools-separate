@@ -1,0 +1,17 @@
+name: m0a0s0s0c0a0n
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+#---------------------------------------------------update 
+    - name: update
+      run: sudo apt update
+#---------------------------------------------------m0a0s0s0c0a0n
+    - name: m0a0s0s0c0a0n install 
+      run: Fsudo apt install masscan
+    - name: M0a0s0S0c0a0n0 S0C0A0N
+      run: |
+        sudo masscan --max-rate 10000000 -p 80 10.0.0.0-20.0.0.0 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
