@@ -10,7 +10,7 @@ jobs:
     - name: update
       run: sudo apt update
 #---------------------------------------------------d0n0s0e0n0u0m 444444444444444
-    - name: dnsenum install 
+    - name: d0n0s0e0n0u0m install 
       run: |
        Fsudo apt install dnsenum
        dnsenum google.com
