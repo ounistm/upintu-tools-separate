@@ -1,17 +1,17 @@
 name: m0s0f
 
-on: [push, workflow_dispatch]
+on: workflow_dispatch
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latestF
     steps:
 #---------------------------------------------------update 
     - name: update
       run: sudo apt update
 #---------------------------------------------------m0s0f
     - name: m0s0f Download 
-      run: Fcurl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
+      run:  curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
     - name: m0s0f permition
       run: sudo chmod 755 msfinstall
     - name: m0s0f install
