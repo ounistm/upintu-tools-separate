@@ -34,5 +34,25 @@ jobs:
       run: sudo nmap --script=all a4k.amaazon.com -d
 
       
-    - name: Error
-      run: F  
+#==============================================================================
+#nmap -sC 192.168.100.0/24                                                   =>all scripts
+#nmap --script=all 192.168.100.0/24                                          =>all scripts
+#nmap --script = vulnerability 192.168.100.3                                 =>vulnerability category 
+#nmap --script = all 192.168.100.4                                           =>all scripts
+#nmap --script banner 192.168.18.132                                         =>banner
+#nmap --script vuln 192.168.18.132                                           => 44444444  cve+OSVDB scan
+#nmap -sV --script "(http-*) and not(http-slowloris or http-brute)" <target> =>excluding scripts
+#------------you must run -sV first
+#ftp scripts=> sudo nmap -p 21 --script "ftp-*" a.com -d
+#ssh scripts=> sudo nmap -p 22 --script "ssh-*" a.com -d
+#smtp scripts=> sudo nmap -p 25 --script "smtp-*" a.com -d
+#http scripts=> sudo nmap -p 80 --script "http-*" a.com -d
+#pop3 scripts=> sudo nmap -p 110 --script "pop3-*" a.com -d
+#imap scripts=> sudo nmap -p 143 --script "imap-*" a.com -d
+#ssl scripts=> sudo nmap -p 443 --script "ssl-*" a -d
+#smtp scripts=> sudo nmap -p 587 --script "smtp-*" a -d
+#mysql scripts=> sudo nmap -p 3306 --script "mysql-*" a -d
+
+
+
+
