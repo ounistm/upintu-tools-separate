@@ -20,15 +20,10 @@ jobs:
        #sudo nmap -sV --script=vulscan/vulscan.nse 47.246.137.62 -d
        #sudo nmap -sV --script vuln djelfa.info -d
       
-        #cd /usr/share/nmap/scripts/
+
         git clone https://github.com/vulnersCom/nmap-vulners.git
-        echo "------------------------------------ls -l"
-        ls -l 
         sudo cp -r nmap-vulners /usr/share/nmap/scripts
-        echo "------------------------------------ls -l /usr/share/nmap/scripts"
-        ls -l /usr/share/nmap/scripts
-        echo "------------------------------------don"
-        sudo Fnmap –script nmap-vulners/ -sV a.com
+        sudo nmap -sV –script nmap-vulners/ new.egybest.co
        
    # - name: nmap api.amazonalexa.com 
    #   run: sudo nmap --script "(all) and not((http-slowloris or http-form-fuzzer )" api.amazonalexa.com  -d
@@ -95,15 +90,16 @@ jobs:
 #=======================================================brute force fine
 #=======================================================Nmap vurlnability scan
 #-----------------------nmap vuln
-#sudo nmap -sV --script vuln djelfa.info -d
+#        sudo nmap -sV --script vuln djelfa.info -d
 #-----------------------vulscan
 #        git clone https://github.com/scipag/vulscan
-#       sudo ln -s 'pwd'/scipag_vulscan /usr/share/nmap/scripts/vulscan
-#       sudo nmap -sV --script=vulscan/vulscan.nse a.com -d
+#        sudo ln -s 'pwd'/scipag_vulscan /usr/share/nmap/scripts/vulscan
+#        sudo nmap -sV --script=vulscan/vulscan.nse a.com -d
 #------------------------Nmap-vulners
-#cd /usr/share/nmap/scripts/
-#git clone https://github.com/vulnersCom/nmap-vulners.git
-#nmap –script nmap-vulners/ -sV a.com
+#        git clone https://github.com/vulnersCom/nmap-vulners.git
+#        sudo cp -r nmap-vulners /usr/share/nmap/scripts
+#        sudo nmap –script nmap-vulners/ -sV a.com
+
 #=======================================================
 #To save the results to a text file: -oN output.txt       
 
