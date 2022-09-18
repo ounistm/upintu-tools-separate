@@ -1,0 +1,16 @@
+name: d0n0s0-r0e0c0o0n
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+#---------------------------------------------------update 
+    - name: update
+      run: sudo apt update
+#---------------------------------------------------d0n0s0-r0e0c0o0n
+    - name: d0n0s0-r0e0c0o0n install 
+      run: |
+       sudo apt install dnsrecon
+       dnsrecon -d google.com
