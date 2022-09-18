@@ -13,26 +13,26 @@ jobs:
     - name: n0m0a0p install 
       run: sudo apt install nmap
 #    - name: nmap api.amazonalexa.com 
-#      run: sudo nmap -sV --script "(all) and not(http-slowloris )" icmarkets.com -d
+#      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" icmarkets.com -d
         
     - name: nmap developer.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris )" developer.amazon.com -d
+      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" developer.amazon.com -d
     - name: nmap alexa.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris )" alexa.amazon.com -d
+      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" alexa.amazon.com -d
     - name: nmap skills-store.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris )" skills-store.amazon.com -d    
+      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" skills-store.amazon.com -d    
     - name: nmap read.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris )" read.amazon.com -d 
+      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" read.amazon.com -d 
     - name: nmap alexaanswers.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris )" alexaanswers.amazon.com -d 
+      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" alexaanswers.amazon.com -d 
     - name: nmap blueprints.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris )" blueprints.amazon.com -d
+      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" blueprints.amazon.com -d
     - name: nmap creator.amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris )" creator.amazon.com -d
+      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" creator.amazon.com -d
     - name: nmap amazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris )" amazon.com -d
+      run: sudo nmap -sV --script "(all) and not(http-slowloris,http-form-fuzzer )" amazon.com -d
     - name: nmap a4k.amaazon.com
-      run: sudo nmap -sV --script "(all) and not(http-slowloris )" a4k.amaazon.com -d
+      run: sudo nmap -sV --script "(all) and not(http-slowlori,http-form-fuzzers )" a4k.amaazon.com -d
 
       
 #==============================================================================
