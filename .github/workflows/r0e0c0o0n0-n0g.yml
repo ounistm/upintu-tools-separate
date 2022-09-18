@@ -1,10 +1,10 @@
 name: r0e0c0o0n0-n0g
 
-on: [push, workflow_dispatch]
+on: workflow_dispatch
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latestF
     steps:
 #---------------------------------------------------update 
     - name: update
@@ -12,5 +12,5 @@ jobs:
 #--------------------------------------------------r0e0c0o0n0-n0g
     - name: r0e0c0o0n0-n0g install 
       run: |
-       Fsudo apt-get install -y recon-ng
+       sudo apt-get install -y recon-ng
        recon-ng
