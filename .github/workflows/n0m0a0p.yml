@@ -14,8 +14,8 @@ jobs:
       run: sudo apt install nmap && sudo nmap --script-updatedb
 #---------------------------------------------------n0m0a0p exooooooooooooo      
     - name: wh-group.com
-      #run: sudo nmap -sV --script vuln wh-group.com
-      run: sudo nmap -sV wh-group.com
+      run: sudo nmap -sV --script vuln wh-group.com
+      #run: sudo nmap -sV wh-group.com
       
 #---------------------------------------------------n0m0a0p S0C0A0N   
     - name: nmap S0C0A0N   
