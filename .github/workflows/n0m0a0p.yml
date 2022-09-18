@@ -14,7 +14,8 @@ jobs:
       run: sudo apt install nmap && sudo nmap --script-updatedb
 #---------------------------------------------------n0m0a0p S0C0A0N   
     - name: nmap addison
-      run: sudo nmap -sV --script vuln reportbuilder.addison.com
+      #run: sudo nmap -sV --script vuln reportbuilder.addison.com
+      run: sudo nmap -sV reportbuilder.addison.com -d
 
 
       
