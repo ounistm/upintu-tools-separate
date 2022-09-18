@@ -1,0 +1,16 @@
+name: r0e0c0o0n0-n0g
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+#---------------------------------------------------update 
+    - name: update
+      run: sudo apt update
+#--------------------------------------------------r0e0c0o0n0-n0g
+    - name: r0e0c0o0n0-n0g install 
+      run: |
+       Fsudo apt-get install -y recon-ng
+       recon-ng
