@@ -1,0 +1,17 @@
+name: n0i0k0t0o
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+#---------------------------------------------------update 
+    - name: update
+      run: sudo apt update
+#---------------------------------------------------n0i0k0t0o
+    - name: nikto install 
+      run: Fsudo apt install nikto
+    - name: nikto scan
+      run: |
+       nikto -h alexchanger.com
