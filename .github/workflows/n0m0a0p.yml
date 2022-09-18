@@ -10,7 +10,7 @@ jobs:
     - name: update
       run: sudo apt update
 #---------------------------------------------------n0m0a0p
-    - name: nmap install 
+    - name: n0m0a0p install 
       run: Fsudo apt install nmap
     - name: nmap api.amazonalexa.com 
       run: sudo nmap --script=all api.amazonalexa.com -d
