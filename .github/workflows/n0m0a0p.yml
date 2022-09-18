@@ -15,9 +15,10 @@ jobs:
       
     - name: multi fubction vilnscan 
       run : |
-       git clone https://github.com/scipag/vulscan
-       sudo ln -s 'pwd'/scipag_vulscan /usr/share/nmap/scripts/vulscan
-       sudo nmap -sV --script=vulscan/vulscan.nse 47.246.137.62 -d
+       #git clone https://github.com/scipag/vulscan
+       #sudo ln -s 'pwd'/scipag_vulscan /usr/share/nmap/scripts/vulscan
+       #sudo nmap -sV --script=vulscan/vulscan.nse 47.246.137.62 -d
+       sudo nmap -sV --script vuln 47.246.137.62 -d
        
    # - name: nmap api.amazonalexa.com 
    #   run: sudo nmap --script "(all) and not((http-slowloris or http-form-fuzzer )" api.amazonalexa.com  -d
@@ -76,16 +77,16 @@ jobs:
 #Malware
 #Safe
 #Version
-#Vuln 4444
+#Vuln 4444  sudo nmap -sV --script vuln 0.0.0.0
 
 #=======================================================brute force
     #nmap -sV --script http-wordpress-brute --script-args 'userdb=users.txt,passdb=pass.txt' noticiasmercedes.com
 #=======================================================brute force fine
-#=======================================================444444444444444444 vuln scan
+#=======================================================444444444444444444 vulscan
 #        git clone https://github.com/scipag/vulscan
 #       sudo ln -s 'pwd'/scipag_vulscan /usr/share/nmap/scripts/vulscan
 #       sudo nmap -sV --script=vulscan/vulscan.nse linuxhint.com -d
-#=======================================================vuln scan fin
+#=======================================================vulscan scan fin
        
 
 
