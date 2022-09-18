@@ -12,5 +12,5 @@ jobs:
 #---------------------------------------------------d0n0s0-r0e0c0o0n
     - name: d0n0s0-r0e0c0o0n install 
       run: |
-       sudo apt install dnsrecon
+       Fsudo apt install dnsrecon
        dnsrecon -d google.com
