@@ -12,11 +12,11 @@ jobs:
 #---------------------------------------------------n0m0a0p
     - name: n0m0a0p install 
       run: sudo apt install nmap
-    - name: nmap api.amazonalexa.com 
-      run: sudo nmap -sV --script "(all) and not(http-slowloris )" icmarkets.com -d
+#    - name: nmap api.amazonalexa.com 
+#      run: sudo nmap -sV --script "(all) and not(http-slowloris )" icmarkets.com -d
         
     - name: nmap developer.amazon.com
-      run: Fsudo nmap --script=all developer.amazon.com -d
+      run: sudo nmap --script=all developer.amazon.com -d
     - name: nmap alexa.amazon.com
       run: sudo nmap --script=all alexa.amazon.com -d
     - name: nmap skills-store.amazon.com
