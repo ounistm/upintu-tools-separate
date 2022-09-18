@@ -11,7 +11,7 @@ jobs:
       run: sudo apt update
 #---------------------------------------------------n0m0a0p
     - name: n0m0a0p install 
-      run: Fsudo apt install nmap
+      run: sudo apt install nmap
     - name: nmap api.amazonalexa.com 
       #run: sudo nmap --script=all api.amazonalexa.com -d
       run: sudo nmap --script "(all) and not(http-slowloris )" api.amazonalexa.com -d
