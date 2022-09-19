@@ -10,17 +10,24 @@ jobs:
     - name: update
       run: sudo apt update
 #---------------------------------------------------m0a0s0s0c0a0n
-    - name: m0a0s0s0c0a0n install 
-      run: sudo apt install masscan
-    - name: M0a0s0S0c0a0n0 S0C0A0N
+    #- name: m0a0s0s0c0a0n install 
+      #run: sudo apt install masscan
+    - name: create file
       run: | 
-        echo "----------------------------------create file"
-        echo "This is some text" > a.txt
+        echo "----------------------------------create file a.txt "
+        echo "hiiiiiiiiiiiiiiiiiiiiiiiiiiiiii" > a.txt
         echo "----------------------------------view file content" 
         cat a.txt
-
-        echo "----------------------------------ls /home/runneradmin" 
-        ls /home/runneradmin
+        echo "----------------------------------upload it" 
+    - name: lftp
+      run: |
+       echo "----------------------------------install lftp "
+       sudo apt install lftp
+       echo "----------------------------------ls "
+       ls
+       echo "----------------------------------connect "
+       lftp -u ounoua,aaazzzeee1N files.000webhost.com  -e "put a.txt" 
+       
        
 #-------------------------------rasmi
 #        sudo masscan -p8983 0.0.0.0-10.0.0.0 --rate=100000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >masscan.txt
