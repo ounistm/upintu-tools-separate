@@ -19,7 +19,7 @@ jobs:
         echo "----------------------------------view file content" 
         cat a.txt
         echo "----------------------------------represetory path content" 
-        ls /home/runner/work/upintu-tools-separate-v
+        ls /home/runner/work/upintu-tools-separate-v/upintu-tools-separate-v
       
 #-------------------------------rasmi
 #        sudo masscan -p8983 0.0.0.0-10.0.0.0 --rate=100000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >masscan.txt
