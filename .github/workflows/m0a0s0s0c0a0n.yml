@@ -25,8 +25,9 @@ jobs:
        echo "----------------------------------ls "
        ls
        echo "----------------------------------connect "
-       lftp -u ounoua,aaazzzeee1N files.000webhost.com && ls
-       #-e "cd public_html" 
+       #lftp -u ounoua,aaazzzeee1N files.000webhost.com && -e "cd public_html" 
+       lftp -e "put -O public_html a.txt" -u ounoua,aaazzzeee1N files.000webhost.com 
+       echo "----------------------------------don "
        
        
 #-------------------------------rasmi
