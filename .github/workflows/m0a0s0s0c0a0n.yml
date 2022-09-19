@@ -8,28 +8,19 @@ jobs:
     steps:
 #---------------------------------------------------update 
     - name: update
-      run: sudo apt update
+      #run: sudo apt update
 #---------------------------------------------------m0a0s0s0c0a0n
     - name: m0a0s0s0c0a0n install 
-      run: sudo apt install masscan
+      #run: sudo apt install masscan
     - name: M0a0s0S0c0a0n0 S0C0A0N
       run: | 
         echo "----------------------------------create file"
         echo "This is some text" > a.txt
         echo "----------------------------------view file content" 
         cat a.txt
-        echo "---------------------------------upintu-tools-separate-v/upintu-tools-separate-v" 
-        ls /home/runner/work/upintu-tools-separate-v/upintu-tools-separate-v
-        echo "----------------------------------upintu-tools-separate-v" 
-        ls /home/runner/work/upintu-tools-separate-v/
-        echo "----------------------------------work" 
-        ls /home/runner/work/
-        echo "----------------------------------runner" 
-        ls /home/runner/
-        echo "----------------------------------home" 
-        ls /home/
-        echo "----------------------------------ls" 
-        ls 
+
+        echo "----------------------------------ls /home/runneradmin" 
+        ls /home/runneradmin
        
 #-------------------------------rasmi
 #        sudo masscan -p8983 0.0.0.0-10.0.0.0 --rate=100000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >masscan.txt
