@@ -18,7 +18,6 @@ jobs:
         echo "hiiiiiiiiiiiiiiiiiiiiiiiiiiiiii" > a.txt
         echo "----------------------------------view file content" 
         cat a.txt
-        echo "----------------------------------upload it" 
     - name: lftp
       run: |
        echo "----------------------------------install lftp "
@@ -26,7 +25,8 @@ jobs:
        echo "----------------------------------ls "
        ls
        echo "----------------------------------connect "
-       lftp -u ounoua,aaazzzeee1N files.000webhost.com  -e "put a.txt" 
+       lftp -u ounoua,aaazzzeee1N files.000webhost.com
+       #-e "put a.txt" 
        
        
 #-------------------------------rasmi
