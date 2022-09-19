@@ -31,8 +31,7 @@ jobs:
 
        #lftp -u ounoua,aaazzzeee1N files.000webhost.com << EOF put a.txt bye EOF
 
-    
-   echo "----------------------------------don "
+       echo "----------------------------------don "
        
        
 #-------------------------------rasmi
