@@ -8,10 +8,10 @@ jobs:
     steps:
 #---------------------------------------------------update  
     - name: update
-      #run: sudo apt update
+      run: sudo apt update
 #---------------------------------------------------m0a0s0s0c0a0n
     - name: m0a0s0s0c0a0n install 
-      #run: sudo apt install masscan
+      run: sudo apt install masscan
     - name: M0a0s0S0c0a0n0 S0C0A0N
       run: | 
         echo "----------------------------------create file"
