@@ -14,10 +14,10 @@ jobs:
       #run: sudo apt install masscan
     - name: create file
       run: | 
-        echo "----------------------------------create file a.txt "
-        echo "hiiiiiiiiiiiiiiiiiiiiiiiiiiiiii" > a.txt
+        echo "----------------------------------create file mass.txt "
+        echo "hiiiiiiiiiiiiiiiiiiiiiiiiiiiiii" > mass.txt
         echo "----------------------------------view file content" 
-        cat a.txt
+        cat mass.txt
     - name: lftp
       run: |
        echo "----------------------------------install lftp "
@@ -25,12 +25,7 @@ jobs:
        echo "----------------------------------ls "
        ls
        echo "----------------------------------connect "
-       #lftp -e "put -O public_html a.txt" -u ounoua,aaazzzeee1N files.000webhost.com 
-  
-       lftp -u ounoua,aaazzzeee1N files.000webhost.com << EOF cd html/ put a.txt bye EOF       
-
-       #lftp -u ounoua,aaazzzeee1N files.000webhost.com << EOF put a.txt bye EOF
-
+       lftp ounoua:'aaazzzeee@1N'@files.000webhost.com  -e "put mass.txt;ls"
        echo "----------------------------------don "
        
        
