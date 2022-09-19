@@ -27,10 +27,7 @@ jobs:
        echo "----------------------------------connect "
        #lftp -e "put -O public_html a.txt" -u ounoua,aaazzzeee1N files.000webhost.com 
   
-       lftp -u ounoua,aaazzzeee1N files.000webhost.com << EOF
-       put a.txt
-       bye
-       EOF       
+       lftp -u ounoua,aaazzzeee1N files.000webhost.com << EOF cd html/ put a.txt bye EOF       
 
        #lftp -u ounoua,aaazzzeee1N files.000webhost.com << EOF put a.txt bye EOF
 
