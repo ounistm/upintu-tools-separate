@@ -23,8 +23,8 @@ jobs:
       run: | 
        echo "----------------------------------start scan"
        #sudo masscan -p8983 0.0.0.0-1.0.0.0 --rate=1000000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >masscan.txt
-       sudo masscan -p8983 4.4.0.0-4.4.0.0 --rate=1000000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' || true >masscan.txt
-               
+       sudo masscan -p8983 4.4.0.0-4.4.255.255 --rate=1000000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' || true >masscan.txt
+             
        echo "----------------------------------show IPS"
        cat masscan.txt
        #==================================================================LFTP
@@ -36,7 +36,7 @@ jobs:
        echo "----------------------------------test lftp "
        lftp ounoua:'aaazzzeee@1N'@files.000webhost.com  -e "ls"
        echo "----------------------------------upload file "
-       #lftp ounoua:'aaazzzeee@1N'@files.000webhost.com  -e "put mass.txt;ls"
+       #lftp ounoua:'aaazzzeee@1N'@files.000webhost.com  -e "put mass.txt;ls;exit;"
        echo "----------------------------------don "
        
        
