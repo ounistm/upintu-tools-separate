@@ -11,7 +11,7 @@ jobs:
       run: sudo apt update
        #---------------------------------------------------install masscan
     - name: install masscan
-      run: sudo apt install amass
+      run: sudo snap install amass
       #==============================================================masscan 
       #change on => "name: masscan0_1" + "> masscan0_1"+ "echo masscan0_1.txt" +" cat scan masscan0_1"+++++++++IP
     - name: amass scan
