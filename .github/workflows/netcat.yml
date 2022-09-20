@@ -1,4 +1,4 @@
-name: nc
+name: netcat
 
 on: workflow_dispatch
 
