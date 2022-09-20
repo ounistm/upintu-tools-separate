@@ -14,10 +14,16 @@ jobs:
       #run:  sudo apt install gobuster && sudo apt install dirb
     - name: gobuster scan
       run: |
-       echo "--------------ls"
-       ls 
-       echo "--------------ls /home/"
-       ls /home/
+       echo "--------------ls" && ls 
+       echo "--------------ls /home/" && ls /home/
+       
+       echo "--------------ls /home/linuxbrew/" && ls /home/linuxbrew/
+       echo "--------------ls /home/runner/" && ls /home/runner/
+       echo "--------------ls /home/runneradmin/" && ls /home/runneradmin/
+       
+       
+       
+       
        #sudo gobuster dir -e -u google.com -w /usr/share/wordlists/dirb/common.txt
        
        
