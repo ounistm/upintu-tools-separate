@@ -14,9 +14,11 @@ jobs:
       run:  sudo apt install gobuster && sudo apt install dirb
     - name: gobuster scan
       run: |
-       ls /usr/share/wordlists/dirb/
+       echo "--------------ls"
+       ls 
+       echo "--------------ls /home/"
        ls /home/
-       sudo gobuster dir -e -u google.com -w /usr/share/wordlists/dirb/common.txt
+       #sudo gobuster dir -e -u google.com -w /usr/share/wordlists/dirb/common.txt
        
        
        
