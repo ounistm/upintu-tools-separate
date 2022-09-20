@@ -1,0 +1,17 @@
+name: nc
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latestF
+    steps:
+#---------------------------------------------------update 
+    - name: update
+      run: sudo apt update
+#---------------------------------------------------netcat
+    - name: netcat install 
+      run:  sudo apt install netcat
+    - name: netcat scan
+      run: |
+       netcat
