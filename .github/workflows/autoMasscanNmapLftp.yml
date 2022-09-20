@@ -19,7 +19,7 @@ jobs:
     - name: masscan0_1
       run: | 
        echo "------------------start scan"      
-       sudo masscan -p8983 100.0.0.0-110.0.0.0 --rate=1000000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >masscan0_1.txt       
+       sudo masscan -p8983 110.0.0.0-120.0.0.0 --rate=1000000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >masscan0_1.txt       
        echo "---------------ls" && ls && echo "---------------cat masscan0_1.txt" && cat masscan0_1.txt      
       #========================================================================nmap
       #-------------------------nmap  instal and update db
@@ -28,15 +28,15 @@ jobs:
       #-------------------------nmap scan +build file nmap0_1.txt on port 8983
     - name: nmap0_1
       run: |
-       sudo nmap -Pn -sV -p8983 -iL masscan0_1.txt -oN nmap0_1.txt -d
-       echo "---------------ls" && ls && echo "---------------cat nmap0_1.txt" && cat nmap0_1.txt 
-     
+       #sudo nmap -Pn -sV -p8983 -iL masscan0_1.txt -oN nmap0_1.txt -d
+       #echo "---------------ls" && ls && echo "---------------cat nmap0_1.txt" && cat nmap0_1.txt 
+       sudo nmap -v -n -p8983 -iL masscan0_1.txt -oN nmap0_1.txt
+        
        
        
        
        
-       
-       
+
        #==================================================================LFTP
        #----------------------------------------install LFTP
     - name: install lftp
@@ -56,5 +56,6 @@ jobs:
        
        
        
-       
+# nmap -v -n -p- sec.titan.net =>fi 2.2 minut =>open ports+version       
+#-v virbose moade: show how mutsh data send
 # nmap -p 22 -oG - 192.168.1.24 | grep 22/open =>Host: 192.168.1.20 (arcadia.house)  Ports: 22/open/tcp//ssh///
