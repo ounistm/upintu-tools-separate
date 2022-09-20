@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   build:
-    runs-on: ubuntu-latestF
+    runs-on: ubuntu-latest
     steps:
 #---------------------------------------------------update 
     - name: update
