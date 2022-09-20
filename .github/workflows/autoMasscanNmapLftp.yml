@@ -30,7 +30,7 @@ jobs:
       run: |
        #sudo nmap -Pn -sV -p8983 -iL masscan0_1.txt -oN nmap0_1.txt -d
        #echo "---------------ls" && ls && echo "---------------cat nmap0_1.txt" && cat nmap0_1.txt 
-       #sudo nmap -v -n -p8983 -oG - -iL masscan0_1.txt -oN nmap0_1.txt
+       sudo nmap -v -n -p8983 -oG - -iL masscan0_1.txt -oN nmap0_1.txt
        
         
        
