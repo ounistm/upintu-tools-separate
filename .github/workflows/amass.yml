@@ -1,0 +1,22 @@
+name: m0a0s0s0c0a0n
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+#---------------------------------------------------update  
+    - name: update
+      run: sudo apt update
+       #---------------------------------------------------install masscan
+    - name: install masscan
+      run: sudo apt install amass
+      #==============================================================masscan 
+      #change on => "name: masscan0_1" + "> masscan0_1"+ "echo masscan0_1.txt" +" cat scan masscan0_1"+++++++++IP
+    - name: amass scan
+      run: |  
+       echo "----------------------------------start scan"      
+       sudo amass enum -passive -d yahoo.com
+       #echo "---------------ls" && ls && echo "---------------cat masscan0_1.txt" && cat masscan0_1.txt      
+       
