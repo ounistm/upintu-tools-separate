@@ -11,11 +11,11 @@ jobs:
       run: sudo apt update
        #---------------------------------------------------install amass
     - name: install amass
-      run: snap install amass
+      #run: sudo snap install amass
+      run: sudo apt-get install -y amass
       #==============================================================masscan 
     - name: amass scan
       run: |  
        echo "----------------------------------start scan"      
        sudo amass enum -passive -d yahoo.com
-       #echo "---------------ls" && ls && echo "---------------cat masscan0_1.txt" && cat masscan0_1.txt      
-       
+      
