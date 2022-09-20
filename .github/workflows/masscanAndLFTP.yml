@@ -23,7 +23,7 @@ jobs:
       run: | 
        echo "----------------------------------start scan"
       
-       sudo masscan -p8983 4.4.119.0-4.4.119.255 --rate=1000000 >masscan.txt
+       sudo masscan -p8983 0.0.0.0-0.0.0.255 --rate=1000000 >masscan.txt
        grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' masscan.txt>a.txt
        
        echo "----------------------------------ls"      
