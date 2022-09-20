@@ -15,6 +15,7 @@ jobs:
     - name: gobuster scan
       run: |
        ls /usr/share/wordlists/dirb/
+       ls /home/
        sudo gobuster dir -e -u google.com -w /usr/share/wordlists/dirb/common.txt
        
        
