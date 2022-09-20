@@ -17,5 +17,5 @@ jobs:
     - name: amass scan
       run: |  
        echo "----------------------------------start scan"      
-       sudo amass enum -passive -d yahoo.com
+       amass enum -passive -d yahoo.com
       
