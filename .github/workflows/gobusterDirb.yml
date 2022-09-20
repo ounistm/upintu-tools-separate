@@ -21,6 +21,14 @@ jobs:
        echo "--------------ls /home/runner/" && ls /home/runner/
        echo "--------------ls /home/runneradmin/" && ls /home/runneradmin/
        
+       echo "--------------ls /home/runner/" && ls /home/runner/factory
+       echo "--------------ls /home/runner/" && ls /home/runner/perflog
+       echo "--------------ls /home/runner/" && ls /home/runner/runners
+       echo "--------------ls /home/runner/" && ls /home/runner/warmup
+       echo "--------------ls /home/runner/" && ls /home/runner/work
+          
+          
+       
        
        
        
