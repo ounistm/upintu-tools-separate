@@ -1,3 +1,9 @@
+#------------------------------plan
+#massscan make smal range of 1 =>output to 0_1masscan.txt
+#LFTP upload the 01masscan.txt to server
+#nmap scan the 01masscan.txt =>-Pn -sV -p8983 =>output 0_1nmap.txt
+#LFTP upload the 0_1nmap.txt.txt to server
+
 name: m0a0s0s0c0a0n
 
 on: workflow_dispatch
@@ -17,8 +23,8 @@ jobs:
       run: | 
        echo "----------------------------------start scan"
        #sudo masscan -p8983 0.0.0.0-1.0.0.0 --rate=1000000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >masscan.txt
-       sudo masscan -p8983 4.0.0.0-4.5.0.0 --rate=1000000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' || true >masscan.txt
-       
+       sudo masscan -p8983 4.4.0.0-4.4.0.0 --rate=1000000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' || true >masscan.txt
+               
        echo "----------------------------------show IPS"
        cat masscan.txt
        #==================================================================LFTP
