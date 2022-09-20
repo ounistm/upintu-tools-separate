@@ -14,9 +14,10 @@ jobs:
       run:  sudo apt install netcat
     - name: netcat scan
       run: |
-       nc -l -p 1299
+       #nc -l -p 1299
        
        
        
        
 #nc -l -p 1299 =>start lisiner
+#nc localhost 1299 =>connect to lisinner
