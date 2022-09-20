@@ -11,8 +11,8 @@ jobs:
       run: sudo apt update
        #---------------------------------------------------install amass
     - name: install amass
-      #run: sudo snap install amass
-      run: sudo apt-get install -y amass
+      run: sudo snap install amass
+      
       #==============================================================masscan 
     - name: amass scan
       run: |  
