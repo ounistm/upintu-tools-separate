@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 #---------------------------------------------------update 
-    - name: update
+    #- name: update
       #run: sudo apt update
 #---------------------------------------------------gobusterDirb
-    - name: gobusterDirb install 
+    #- name: gobusterDirb install 
       #run:  sudo apt install gobuster && sudo apt install dirb
     - name: gobuster scan
       run: |
