@@ -9,11 +9,10 @@ jobs:
 #---------------------------------------------------update  
     - name: update
       run: sudo apt update
-       #---------------------------------------------------install masscan
-    - name: install masscan
-      run: sudo snap install amass
+       #---------------------------------------------------install amass
+    - name: install amass
+      run: snap install amass
       #==============================================================masscan 
-      #change on => "name: masscan0_1" + "> masscan0_1"+ "echo masscan0_1.txt" +" cat scan masscan0_1"+++++++++IP
     - name: amass scan
       run: |  
        echo "----------------------------------start scan"      
