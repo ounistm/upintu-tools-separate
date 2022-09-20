@@ -8,10 +8,10 @@ jobs:
     steps:
 #---------------------------------------------------update 
     - name: update
-      run: sudo apt update
+      #run: sudo apt update
 #---------------------------------------------------gobusterDirb
     - name: gobusterDirb install 
-      run:  sudo apt install gobuster && sudo apt install dirb
+      #run:  sudo apt install gobuster && sudo apt install dirb
     - name: gobuster scan
       run: |
        echo "--------------ls"
