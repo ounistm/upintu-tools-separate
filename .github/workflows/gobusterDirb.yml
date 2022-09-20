@@ -1,0 +1,20 @@
+name: gobusterDirb
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+#---------------------------------------------------update 
+    - name: update
+      run: sudo apt update
+#---------------------------------------------------gobusterDirb
+    - name: gobusterDirb install 
+      run:  sudo apt install gobuster && sudo apt install dirb
+    - name: gobuster scan
+      run: |
+       gobuster dir -e -u https://www.dzduino.com/ -w /usr/share/wordlists/dirb/common.txt
+       
+       
+       
