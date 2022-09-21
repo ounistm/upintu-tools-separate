@@ -33,7 +33,7 @@ jobs:
     - name: nmap000_010.txt
       run: |
        #sudo nmap -Pn -sV -p8983 -iL masscan000_010.txt -oN nmap000_010.txt -d  
-       sudo nmap -Pn -sV -p8983 10-20.0-255.0-255.0-255 -oN nmap000_010.txt -d  
+       sudo nmap -Pn -sV -n -p8983 45-55.0-255.0-255.0-255 -oN nmap000_010.txt -d  
        echo "---------------ls" && ls && echo "---------------cat nmap000_010.txt" && cat nmap000_010.txt 
        echo "---------------start upload nmap000_010.txt with LFTP "
        lftp ounoua:'aaazzzeee@1N'@files.000webhost.com  -e "put  nmap000_010.txt;exit;"
