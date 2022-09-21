@@ -34,7 +34,7 @@ jobs:
       run: |
        #sudo nmap -Pn -sV -p8983 -iL masscan000_010.txt -oN nmap000_010.txt -d  
        #sudo nmap -Pn -sV -n -p8983 45-55.0-255.0-255.0-255 -oN nmap000_010.txt -d  
-       sudo nmap -Pn -n -v -sS --open -T5 --max-rtt-timeout 1s --min-parallelism 100 -p8983  55-65.0-255.0-255.0-255 -oN nmap000_010.txt -d -F 
+       sudo nmap -Pn -n -v -sS --open -T5 --max-rtt-timeout 1s --min-parallelism 100 -p8983  65-75.0-255.0-255.0-255 -oN nmap000_010.txt -d -F 
  
        echo "---------------ls" && ls && echo "---------------cat nmap000_010.txt" && cat nmap000_010.txt 
        echo "---------------start upload nmap000_010.txt with LFTP "
