@@ -9,12 +9,19 @@ jobs:
 #---------------------------------------------------update 
     - name: update
       run: sudo apt update
+#---------------------------------------------------lt
+    - name: localtunnel install 
+      run:  npm install -g localtunnel
+    - name: localtunnel run
+      run: |
+       lt --port 1299
 #---------------------------------------------------netcat
     - name: netcat install 
       run:  sudo apt install netcat
     - name: netcat scan
       run: |
-       #nc -l -p 1299
+       nc -l -p 1299
+
        
        
        
