@@ -18,23 +18,22 @@ jobs:
     - name: masscan000_010.txt
       run: | 
        echo "------------------start scan"      
-       #sudo masscan -p8983 0.0.0.0-10.0.0.0 --rate=1000000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >masscan000_010.txt  
-       sudo masscan -p389 70.0.0.0-71.0.0.0 --rate=100000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >masscan000_010.txt      
-       echo "---------------ls" && ls && echo "---------------cat masscan000_010.txt" && cat masscan000_010.txt    
-       echo "---------------start upload masscan000_010.txt with LFTP "
-       #lftp ounoua:'aaazzzeee@1N'@files.000webhost.com  -e "put masscan000_010.txt;exit;"
-       sudo masscan -iL masscan000_010.txt -p443 --rate=100000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >masscan000_0102.txt 
-       echo "---------------ls" && ls && echo "---------------cat masscan000_0102.txt" && cat masscan000_0102.txt 
-       F
+       #sudo masscan -p389 70.0.0.0-71.0.0.0 --rate=100000 |grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' >masscan000_010.txt      
+       #echo "---------------ls" && ls && echo "---------------cat masscan000_010.txt" && cat masscan000_010.txt    
+       #echo "---------------start upload masscan000_010.txt with LFTP "
+       ##lftp ounoua:'aaazzzeee@1N'@files.000webhost.com  -e "put masscan000_010.txt;exit;"
+
+       
        
 #========================================================================nmap
 #-------------------------nmap  instal and update db
-    - name: n0m0a0p install and update db
+    - name: nmap install and update db
       run: sudo apt install nmap && sudo nmap --script-updatedb  
 #-------------------------nmap scan +build file nmap000_010.txt on port 8983
     - name: nmap000_010.txt
       run: |
-       sudo nmap -Pn -sV -p8983 -iL masscan000_010.txt -oN nmap000_010.txt -d             
+       #sudo nmap -Pn -sV -p8983 -iL masscan000_010.txt -oN nmap000_010.txt -d  
+       sudo nmap -Pn -sV -p8983 10-20.0-255.0-255.0-255 -oN nmap000_010.txt -d  
        echo "---------------ls" && ls && echo "---------------cat nmap000_010.txt" && cat nmap000_010.txt 
        echo "---------------start upload nmap000_010.txt with LFTP "
        lftp ounoua:'aaazzzeee@1N'@files.000webhost.com  -e "put  nmap000_010.txt;exit;"
