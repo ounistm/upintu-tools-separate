@@ -17,7 +17,7 @@ jobs:
 #-----------------------nmap ping + open port
     - name: nmap ping
       run: |
-       nmap -v --min-rate 10000 -p- 142.251.0-255.255.0-255 -oN nmapPing.txt -d 
+       nmap -v --min-rate 10000 -p- 142.251.0-255.0-255 -oN nmapPing.txt -d 
        echo "---------------cat nmapPing.txt" && cat nmapPing.txt
        #nmap -v -p- --min-rate 10000 -d 70-71.0-255.0-255.0-255
       
