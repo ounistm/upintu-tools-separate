@@ -14,43 +14,17 @@ jobs:
 #-----------------------nmap ping + open port
     - name: nmap000_010.txt
       run: |
-       nmap -v -p- --min-rate 10000 -d 70-71.0-255.0-255.0-255
+       nmap -v --min-rate 10000 -p- 70-71.0-255.0-255.0-255 -d 
+       #nmap -v -p- --min-rate 10000 -d 70-71.0-255.0-255.0-255
       
-#-------------------------nmap scan +build file nmap000_010.txt on port 8983
-    #- name: nmap000_010.txt
-      #run: |
-       #sudo nmap -Pn -sV -p8983 -iL masscan000_010.txt -oN nmap000_010.txt -d  
-       #sudo nmap -Pn -sV -n -p8983 45-55.0-255.0-255.0-255 -oN nmap000_010.txt -d  
-       ##sudo nmap -Pn -n -v -sS --open -T5 --max-rtt-timeout 1s --min-parallelism 100 -p8983  65-75.0-255.0-255.0-255 -oN nmap000_010.txt -d 
- 
-       ##echo "---------------ls" && ls && echo "---------------cat nmap000_010.txt" && cat nmap000_010.txt 
-       ##echo "---------------start upload nmap000_010.txt with LFTP "
-       ##lftp ounoua:'aaazzzeee@1N'@files.000webhost.com  -e "put  nmap000_010.txt;exit;"
-            
-
-
-
-
-
-       #==================================================================LFTP
-       #----------------------------------------install LFTP
-    #- name: install lftp
-      #run: sudo apt install lftp
-    #- name: lftp
-      #run: |
-       #echo "----------------------------------test lftp "
-       #lftp ounoua:'aaazzzeee@1N'@files.000webhost.com  -e "ls"
-       #echo "----------------------------------upload file "
-       #lftp ounoua:'aaazzzeee@1N'@files.000webhost.com  -e "put mass.txt;ls;exit;"
-       #echo "----------------------------------don "
-       
        
        
 #masscan -iL ip_list.txt -p 80       
-#-A nmap -A 192.168.2.107 =>details about the version of running services and also points out any vulnerabilities
-#-sS =>nmap -sS 192.168.2.107=> quickly scans multiple ports within the shortest time possible     
+#-A: Enable OS detection, version detection, script scanning, and traceroute =>details about the version of running services and also points out any vulnerabilities
+#-sS =>nmap -sS 0.0.0.0=> quickly scans multiple ports within the shortest time possible     
 #-sn if you just want to know which remote hosts are alive       
-#-n parameter to disable reverse DNS resolution lazem tkoun       
-# nmap -v -n -p- sec.titan.net =>fi 2.2 minut =>open ports+version       
-#-v virbose moade: show how mutsh data send
+#-n parameter to disable reverse DNS resolution lazem tkoun            
+#-v :enables verbose mode=> show how mutsh data send
+
 # nmap -p 22 -oG - 192.168.1.24 | grep 22/open =>Host: 192.168.1.20 (arcadia.house)  Ports: 22/open/tcp//ssh///
+# nmap -v -n -p- 0.0.0.0 =>fi 2.2 minut =>open ports+version  
