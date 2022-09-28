@@ -11,10 +11,14 @@ jobs:
       run: sudo apt update  && sudo apt install nmap && sudo nmap --script-updatedb   && echo "------------------update  os + nmap install and update done"  
 
 #========================================================================nmap
+#1- ping scan for get hosts up =>IPsPing.txt
+#2- port scan for get the ports on IpsPing=>IPsPort.txt
+#3- services scan for get the services runing on IPsPort=>IPsServices
 #-----------------------nmap ping + open port
-    - name: nmap000_010.txt
+    - name: nmap ping
       run: |
-       nmap -v --min-rate 10000 -p- 70-71.0-255.0-255.0-255 -d 
+       nmap -v --min-rate 10000 -p- 142.251.0-255.255.0-255 -oN nmapPing.txt -d 
+       echo "---------------cat nmapPing.txt" && cat nmapPing.txt
        #nmap -v -p- --min-rate 10000 -d 70-71.0-255.0-255.0-255
       
        
