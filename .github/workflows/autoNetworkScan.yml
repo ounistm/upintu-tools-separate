@@ -13,13 +13,16 @@ jobs:
 #========================================================================nmap
 #1- ping scan for get hosts up =>IPsPing.txt
 #2- port scan for get the ports on IpsPing=>IPsPort.txt
-#3- services scan for get the services runing on IPsPort=>IPsServices
-#-----------------------nmap ping + open port
-    #- name: nmap ping
-      #run: |
-       #sudo nmap -v -sP --min-rate 100000 142.250.200.0-255 -oN IPsPing.txt -d 
-       #echo "---------------ls" && ls
-       #echo "---------------cat IPsPing.txt" && cat IPsPing.txt       
+#3- services scan for get the services runing on IPsPort=>IPsServices   
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++actions
+#-----------------------nmap ping + open port       
+    - name: nmap ping
+      run: |
+       sudo nmap -v -n -sS --min-rate 100000 -p 445 -script smb-check-vulns -script-args=unsafe=1 10.0.0-255.0-255 -oN nmapPing.txt -d
+       echo "---------------ls" && ls
+       echo "---------------cat nmapPing.txt" && cat nmapPing.txt  
+       F
+
 #-----------------------nmap ping + open port       
     - name: nmap ping
       run: |
@@ -40,6 +43,8 @@ jobs:
 #-sP:Skip port scan=>ping scan
 #-sn (No port scan)
 #-sS: TCP SYN scan=>sceep the therd hand shack
+#4444444444444 nmap safe scan 
+          #=>nmap -p 445 -script smb-check-vulns -script-args=unsafe=1 <IP Address>
 # nmap -p 22 -oG - 192.168.1.24 | grep 22/open =>Host: 192.168.1.20 (arcadia.house)  Ports: 22/open/tcp//ssh///
 # nmap -v -n -p- 0.0.0.0 =>fi 2.2 minut =>open ports+version  
 #sudo nmap -Pn -n -v -sS --open -T5 --max-rtt-timeout 1s --min-parallelism 100 -p8983  65-75.0-255.0-255.0-255 -oN nmap000_010.txt -d 
