@@ -17,10 +17,15 @@ jobs:
 #-----------------------nmap ping + open port
     - name: nmap ping
       run: |
-       nmap -v --min-rate 10000 -p- 142.250.200.0-255 -oN nmapPing.txt -d 
+       nmap -v -sP --min-rate 100000 142.250.200.0-255 -oN IPsPing.txt -d 
        echo "---------------ls" && ls
-       echo "---------------cat nmapPing.txt" && cat nmapPing.txt
-       
+       echo "---------------cat nmapPing.txt" && cat nmapPing.txt       
+#-----------------------nmap ping + open port       
+    #- name: nmap ping
+      #run: |
+       #nmap -v --min-rate 10000 -p- 142.250.200.0-255 -oN nmapPing.txt -d 
+       #echo "---------------ls" && ls
+       #echo "---------------cat nmapPing.txt" && cat nmapPing.txt       
        #nmap -v -p- --min-rate 10000 -d 70-71.0-255.0-255.0-255
       
        
@@ -29,8 +34,12 @@ jobs:
 #-A: Enable OS detection, version detection, script scanning, and traceroute =>details about the version of running services and also points out any vulnerabilities
 #-sS =>nmap -sS 0.0.0.0=> quickly scans multiple ports within the shortest time possible     
 #-sn if you just want to know which remote hosts are alive       
-#-n parameter to disable reverse DNS resolution lazem tkoun            
+#-n :disable reverse DNS resolution lazem tkoun            
 #-v :enables verbose mode=> show how mutsh data send
+#-Pn:skips the host discovery =>even if the host dont responce to ping ,scan it
+#-sP:Skip port scan=>ping scan
 
 # nmap -p 22 -oG - 192.168.1.24 | grep 22/open =>Host: 192.168.1.20 (arcadia.house)  Ports: 22/open/tcp//ssh///
 # nmap -v -n -p- 0.0.0.0 =>fi 2.2 minut =>open ports+version  
+#sudo nmap -Pn -n -v -sS --open -T5 --max-rtt-timeout 1s --min-parallelism 100 -p8983  65-75.0-255.0-255.0-255 -oN nmap000_010.txt -d 
+#nmap -sP 208.109.192.1-255 =>png scan
