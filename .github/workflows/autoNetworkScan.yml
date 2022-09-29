@@ -18,7 +18,7 @@ jobs:
 #-----------------------nmap ping + open port       
     - name: nmap ping
       run: |
-       sudo nmap -v -n -sS --min-rate 100000 -p 445 -script smb-vuln-ms08-067.nse -script-args=unsafe=1 11.0.0.0-255 -oN nmapPing.txt
+       sudo nmap -v -n -sS --open --min-rate 100000 -p 445 -script smb-vuln-ms08-067.nse -script-args=unsafe=1 11.0.0.0-255 -oN nmapPing.txt
        echo "---------------ls" && ls
        echo "---------------cat nmapPing.txt" && cat nmapPing.txt  
        F
