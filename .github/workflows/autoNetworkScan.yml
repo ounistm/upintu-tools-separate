@@ -23,7 +23,7 @@ jobs:
 #-----------------------nmap ping + open port       
     - name: nmap ping
       run: |
-       nmap -v -n -sP --open --min-rate 100000 -p- 142.250.200.0-255 -oN nmapPing.txt -d 
+       nmap -v -n -sS --open --min-rate 100000 -p- 142.250.200.0-255 -oN nmapPing.txt -d 
        echo "---------------ls" && ls
        echo "---------------cat nmapPing.txt" && cat nmapPing.txt       
      
@@ -36,8 +36,9 @@ jobs:
 #-sn if you just want to know which remote hosts are alive       
 #-n :disable reverse DNS resolution lazem tkoun            
 #-v :enables verbose mode=> show how mutsh data send
-#-Pn:skips the host discovery =>even if the host dont responce to ping ,scan it
+#-Pn (No ping):skips the host discovery =>even if the host dont responce to ping ,scan it
 #-sP:Skip port scan=>ping scan
+#-sn (No port scan)
 #-sS: TCP SYN scan=>sceep the therd hand shack
 # nmap -p 22 -oG - 192.168.1.24 | grep 22/open =>Host: 192.168.1.20 (arcadia.house)  Ports: 22/open/tcp//ssh///
 # nmap -v -n -p- 0.0.0.0 =>fi 2.2 minut =>open ports+version  
