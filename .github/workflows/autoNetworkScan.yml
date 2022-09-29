@@ -19,7 +19,7 @@ jobs:
       run: |
        nmap -v -sP --min-rate 100000 142.250.200.0-255 -oN IPsPing.txt -d 
        echo "---------------ls" && ls
-       echo "---------------cat nmapPing.txt" && cat nmapPing.txt       
+       echo "---------------cat IPsPing.txt" && cat IPsPing.txt       
 #-----------------------nmap ping + open port       
     #- name: nmap ping
       #run: |
