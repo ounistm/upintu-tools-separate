@@ -17,13 +17,13 @@ jobs:
 #-----------------------nmap ping + open port
     #- name: nmap ping
       #run: |
-       #nmap -v -sP --min-rate 100000 142.250.200.0-255 -oN IPsPing.txt -d 
+       #sudo nmap -v -sP --min-rate 100000 142.250.200.0-255 -oN IPsPing.txt -d 
        #echo "---------------ls" && ls
        #echo "---------------cat IPsPing.txt" && cat IPsPing.txt       
 #-----------------------nmap ping + open port       
     - name: nmap ping
       run: |
-       nmap -v -n -sS --open --min-rate 100000 -p- 142.250.200.0-255 -oN nmapPing.txt -d 
+       sudo nmap -v -n -sS --open --min-rate 100000 -p- 142.250.200.0-255 -oN nmapPing.txt -d 
        echo "---------------ls" && ls
        echo "---------------cat nmapPing.txt" && cat nmapPing.txt       
      
