@@ -7,13 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 #---------------------------------------------------update 
-    - name: update
-      run: sudo apt update
+    #- name: update
+      #run: sudo apt update
 #---------------------------------------------------gobusterDirb
-    - name: gobusterDirb install 
-      run:  sudo apt install gobuster && sudo apt install dirb
+    #- name: gobusterDirb install 
+      #run:  sudo apt install gobuster && sudo apt install dirb
     - name: gobuster scan
       run: |
+       echo "--------------cd and ls" && cd .. && ls
+       echo "--------------cd and ls" && cd .. && ls
+       echo "--------------cd and ls" && cd .. && ls
        echo "--------------cd and ls" && cd .. && ls
        
       
