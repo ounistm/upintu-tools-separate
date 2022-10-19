@@ -1,4 +1,4 @@
-name: 01-nikto
+name: nikto
 
 on: workflow_dispatch
 
