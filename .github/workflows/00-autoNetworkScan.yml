@@ -11,7 +11,7 @@ jobs:
       run: sudo apt update  && sudo apt install nmap && sudo nmap --script-updatedb   && echo "------------------update  os + nmap install and update done"  
 
 #========================================================================nmap
-#1- ping scan for get hosts up =>IPsPing.txt
+#1- ping scan for get hosts up =>IPsPing.txt 
 #2- port scan for get the ports on IpsPing=>IPsPort.txt
 #3- services scan for get the services runing on IPsPort=>IPsServices   
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++actions
