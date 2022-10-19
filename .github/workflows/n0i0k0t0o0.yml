@@ -1,0 +1,29 @@
+#name: nikto
+#
+#on: workflow_dispatch
+
+#jobs:
+#  build:
+#    runs-on: ubuntu-latestF
+#    steps:
+#---------------------------------------------------update 
+#    - name: update
+#      run: sudo apt update
+#---------------------------------------------------nikto
+    #- name: nikto install 
+      #run:  sudo apt install nikto
+    #- name: nikto scan
+      #run: |
+       #nikto -h st.iqraa.opu.dz 
+
+name: n0i0k0t0o0
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+#------------------------update  os + nmap install and update
+    - name: update  os + nmap install and update
+      run: sudo apt update  && sudo apt install nmap && sudo nmap --script-updatedb   && echo "------------------update  os + nmap install and update done"  
