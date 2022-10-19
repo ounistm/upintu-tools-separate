@@ -1,4 +1,4 @@
-name: n0i0k0t0o
+name: 01-nikto
 
 on: workflow_dispatch
 
@@ -9,9 +9,9 @@ jobs:
 #---------------------------------------------------update 
     - name: update
       run: sudo apt update
-#---------------------------------------------------n0i0k0t0o
-    - name: n0i0k0t0o install 
+#---------------------------------------------------nikto
+    - name: nikto install 
       run:  sudo apt install nikto
-    - name: n0i0k0t0o scan
+    - name: nikto scan
       run: |
-       nikto -h a.com
+       nikto -h st.iqraa.opu.dz
