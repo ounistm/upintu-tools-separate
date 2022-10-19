@@ -1,0 +1,21 @@
+
+name: 02-dirb
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+#---------------------------------------------------update 
+    - name: update
+      run: sudo apt update
+#---------------------------------------------------gobusterDirb
+    - name: dirb install 
+      run:  sudo apt install dirb
+    - name: dirb scan
+      run: |
+       sudo dirb google.com
+       #sudo gobuster dir -e -u st.iqraa.opu.dz -w /usr/share/wordlists/dirb/common.txt
+          
+          
