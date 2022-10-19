@@ -18,6 +18,10 @@ jobs:
        echo "--------------cd and ls" && cd .. && ls
        echo "--------------cd and ls" && cd .. && ls
        echo "--------------cd and ls" && cd .. && ls
+       echo "--------------cd and ls" && cd .. && ls
+       echo "--------------cd and ls" && cd .. && ls
+       echo "--------------cd and ls" && cd .. && ls
+       echo "--------------cd and ls" && cd .. && ls
        
       
        #sudo gobuster dir -e -u st.iqraa.opu.dz -w /usr/share/wordlists/dirb/common.txt      
