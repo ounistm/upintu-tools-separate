@@ -1,4 +1,5 @@
  #for showing diractory on the website
+ #dirsearch best then dirb
 name: 02-dirb
 
 on: workflow_dispatch
