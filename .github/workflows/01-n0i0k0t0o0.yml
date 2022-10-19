@@ -1,21 +1,3 @@
-#name: nikto
-#
-#on: workflow_dispatch
-
-#jobs:
-#  build:
-#    runs-on: ubuntu-latestF
-#    steps:
-#---------------------------------------------------update 
-#    - name: update
-#      run: sudo apt update
-#---------------------------------------------------nikto
-    #- name: nikto install 
-      #run:  sudo apt install nikto
-    #- name: nikto scan
-      #run: |
-       #nikto -h st.iqraa.opu.dz 
-
 name: 01-n0i0k0t0o0
 
 on: workflow_dispatch
@@ -28,8 +10,8 @@ jobs:
     - name: update  os + nmap install and update
       run: sudo apt update
 #---------------------------------------------------nikto
-    #- name: nikto install 
-      #run:  sudo apt install nikto
-    #- name: nikto scan
-      #run: |
-       #nikto -h st.iqraa.opu.dz 
+    - name: nikto install 
+      run:  sudo apt install nikto
+    - name: nikto scan
+      run: |
+       nikto -h st.iqraa.opu.dz 
