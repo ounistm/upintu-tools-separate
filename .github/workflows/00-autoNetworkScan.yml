@@ -2,7 +2,7 @@
 #2- port scan for get the ports on IpsPing=>IPsPort.txt
 #3- services scan for get the services runing on IPsPort=>IPsServices   
 
-name: autoNetworkScan
+name: 00-autoNetworkScan
 
 on: workflow_dispatch
 
