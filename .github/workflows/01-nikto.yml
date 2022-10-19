@@ -14,4 +14,4 @@ jobs:
       run:  sudo apt install nikto
     - name: nikto scan
       run: |
-       nikto -h st.iqraa.opu.dz
+       nikto -h st.iqraa.opu.dz 
