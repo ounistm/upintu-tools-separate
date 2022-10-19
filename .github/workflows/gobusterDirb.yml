@@ -15,6 +15,7 @@ jobs:
     - name: gobuster scan
       run: |
        echo "--------------cd and ls" && cd .. && cd .. && cd .. && cd .. && cd .. && ls
-       sudo gobuster dir -e -u st.iqraa.opu.dz -w /usr/share/wordlists/dirb/common.txt      
+       sudo gobuster dir -e -u google.com -w /usr/share/wordlists/dirb/common.txt
+       #sudo gobuster dir -e -u st.iqraa.opu.dz -w /usr/share/wordlists/dirb/common.txt
           
           
