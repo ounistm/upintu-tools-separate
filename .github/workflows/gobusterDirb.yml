@@ -7,27 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 #---------------------------------------------------update 
-    #- name: update
-      #run: sudo apt update
+    - name: update
+      run: sudo apt update
 #---------------------------------------------------gobusterDirb
-    #- name: gobusterDirb install 
-      #run:  sudo apt install gobuster && sudo apt install dirb
+    - name: gobusterDirb install 
+      run:  sudo apt install gobuster && sudo apt install dirb
     - name: gobuster scan
       run: |
        echo "--------------cd and ls" && cd .. && cd .. && cd .. && cd .. && cd .. && ls
-      
-       
-      
-       #sudo gobuster dir -e -u st.iqraa.opu.dz -w /usr/share/wordlists/dirb/common.txt      
-       #echo "--------------ls" && ls 
-       #echo "--------------ls /home/" && ls /home/       
-       #echo "--------------ls /home/linuxbrew/" && ls /home/linuxbrew/
-       #echo "--------------ls /home/runner/" && ls /home/runner/
-       #echo "--------------ls /home/runneradmin/" && ls /home/runneradmin/       
-       #echo "--------------ls /home/runner/factory" && ls /home/runner/factory
-       #echo "--------------ls /home/runner/perflog" && ls /home/runner/perflog
-       #echo "--------------ls /home/runner/runners" && ls /home/runner/runners
-       #echo "--------------ls /home/runner/warmup" && ls /home/runner/warmup
-       #echo "--------------ls /home/runner/work" && ls /home/runner/work
+       sudo gobuster dir -e -u st.iqraa.opu.dz -w /usr/share/wordlists/dirb/common.txt      
           
           
