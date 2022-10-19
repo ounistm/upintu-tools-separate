@@ -16,7 +16,7 @@
       #run: |
        #nikto -h st.iqraa.opu.dz 
 
-name: n0i0k0t0o0
+name: 01-n0i0k0t0o0
 
 on: workflow_dispatch
 
