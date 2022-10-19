@@ -14,7 +14,10 @@ jobs:
       run:  sudo apt install gobuster && sudo apt install dirb
     - name: gobuster scan
       run: |
-       sudo gobuster dir -e -u st.iqraa.opu.dz -w /usr/share/wordlists/dirb/common.txt
+       echo "--------------cd and ls" && cd.. && ls
+       
+      
+       #sudo gobuster dir -e -u st.iqraa.opu.dz -w /usr/share/wordlists/dirb/common.txt      
        #echo "--------------ls" && ls 
        #echo "--------------ls /home/" && ls /home/       
        #echo "--------------ls /home/linuxbrew/" && ls /home/linuxbrew/
