@@ -10,8 +10,8 @@ jobs:
     - name: update
       run: sudo apt update
 #---------------------------------------------------nikto
-    - name: nikto install 
-      run:  sudo apt install nikto
-    - name: nikto scan
-      run: |
-       nikto -h st.iqraa.opu.dz 
+    #- name: nikto install 
+      #run:  sudo apt install nikto
+    #- name: nikto scan
+      #run: |
+       #nikto -h st.iqraa.opu.dz 
