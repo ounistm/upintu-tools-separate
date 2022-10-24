@@ -15,18 +15,18 @@ jobs:
       run: sudo apt update  && sudo apt install nmap && sudo nmap --script-updatedb   && echo "------------------update  os + nmap install and update done"  
 
 #========================================================================nmap
-#-----------------------nmap ping + open port       
-    - name: nmap ping
-      run: |
-       sudo nmap -v -n -sS --open --min-rate 100000 -p 445 -script smb-vuln-ms08-067.nse -script-args=unsafe=1 12.0-255.0-255.0-255 -oN nmapPing.txt
-       echo "---------------ls" && ls
-       echo "---------------cat nmapPing.txt" && cat nmapPing.txt  
-       F
+#-----------------------nmap ping + open port  range
+    #- name: nmap ping
+      #run: |
+       #sudo nmap -v -n -sS --open --min-rate 100000 -p 445 -script smb-vuln-ms08-067.nse -script-args=unsafe=1 12.0-255.0-255.0-255 -oN nmapPing.txt
+       #echo "---------------ls" && ls
+       #echo "---------------cat nmapPing.txt" && cat nmapPing.txt  
+       
 
 #-----------------------nmap ping + open port       
     - name: nmap ping
       run: |
-       sudo nmap -v -n -sS --min-rate 100000 -p- 142.250.200.0-255 -oN nmapPing.txt -d 
+       sudo nmap -v -n -sS --min-rate 100000 -p- 69.5.17.174 -oN nmapPing.txt -d 
        echo "---------------ls" && ls
        echo "---------------cat nmapPing.txt" && cat nmapPing.txt       
      
