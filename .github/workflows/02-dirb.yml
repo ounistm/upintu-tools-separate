@@ -16,7 +16,7 @@ jobs:
       run:  sudo apt install dirb
     - name: dirb scan
       run: |
-       sudo dirb https://st.iqraa.opu.dz/
+       sudo dirb http://scsi4me.com/display.php?page=/../../../../../../../var/log/
        #sudo gobuster dir -e -u st.iqraa.opu.dz -w /usr/share/wordlists/dirb/common.txt
           
           
