@@ -26,11 +26,11 @@ jobs:
 #-----------------------nmap ping + open port       
     - name: nmap ping
       run: |
-       sudo nmap -v -n -sS --min-rate 100000 -p- 69.5.17.174 -oN nmapPing.txt -d 
-       echo "---------------ls" && ls
-       echo "---------------cat nmapPing.txt" && cat nmapPing.txt       
-     
-      
+       #sudo nmap -v -n -sS --min-rate 100000 -p- 69.5.17.174 -oN nmapPing.txt -d 
+       #echo "---------------ls" && ls
+       #echo "---------------cat nmapPing.txt" && cat nmapPing.txt       
+       nmap --script vuln 69.5.17.174
+    
        
        
 #masscan -iL ip_list.txt -p 80       
