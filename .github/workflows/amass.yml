@@ -17,5 +17,5 @@ jobs:
     - name: amass scan
       run: |  
        echo "----------------------------------start scan"      
-       amass enum -passive -d dzduino.com
+       amass enum -passive -d perfectmoney.com
       
